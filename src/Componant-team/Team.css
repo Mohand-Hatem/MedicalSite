@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Teamcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.Teambox {
+  border: 2px solid rgba(86, 90, 207, 0.2);
+  padding: 25px 10px;
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.Teambox .Teamphoto img {
+  border-radius: 50%;
+  width: 75% !important;
+}
+.Teambox .Teamphoto {
+  text-align: center;
+  padding: 50px;
+  margin: 20px 0;
+  position: relative;
+}
+.Teambox .Teamphoto::after {
+  background-image: url(../Assets/docland.png);
+  background-size: 65%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  content: "";
+  height: 100%;
+  left: 0%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.Teambox .Teamphoto::before {
+  background-image: url(../Assets/docland2.png);
+  background-size: 85%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  content: "";
+  height: 100%;
+  left: 0%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  transition: 0.3s;
+}
+.Teambox:hover .Teamphoto::before {
+  opacity: 1;
+}
+.Teambox:hover .Teamphoto::after {
+  opacity: 1;
+}
+.Teambox:hover {
+  box-shadow: 0 0 10px #aaa;
+}
+
+.Teambox .Teaminfo {
+  text-align: center;
+}
+.Teambox .Teaminfo h4 {
+  color: var(--fon-color);
+  font-weight: bold;
+}
+.Teambox .Teaminfo h5 {
+  color: var(--orange-color);
+}
+
+.Teambox .Teamlinks {
+  padding: 10px 0;
+}
+.Teambox .Teamlinks i {
+  margin: 10px;
+  font-size: 40px;
+  color: #565acf;
+}
+.Teamcontainer .wide {
+  position: absolute;
+  top: 62%;
+  left: -60px;
+  z-index: -1;
+  animation: wideteam 2s ease infinite alternate;
+}
+.Teamcontainer .circle {
+  position: absolute;
+  top: 50%;
+  right: 250px;
+  z-index: -1;
+  animation: circleteam 1.5s ease infinite alternate;
+}
+
+@keyframes wideteam {
+  from {
+    top: 62%;
+    left: -60px;
+  }
+  to {
+    top: 63%;
+    left: -60px;
+  }
+}
+@keyframes circleteam {
+  from {
+    top: 50%;
+    right: 250px;
+  }
+  to {
+    top: 50%;
+    right: 290px;
+  }
+}

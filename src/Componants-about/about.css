@@ -1,0 +1,331 @@
+.AboutUs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 120px 0 !important;
+  overflow: hidden;
+}
+
+.AboutUs .DocsInfo {
+  flex-basis: 50%;
+  padding: 10px;
+  position: relative;
+}
+
+.AboutUs .Docs {
+  display: flex;
+  /* background-color: #09c; */
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 20px;
+  flex-basis: 50%;
+  position: relative;
+}
+
+.AboutUs .DocsInfo > h5 {
+  color: #f17732;
+  background-image: url(../Assets/h6.png);
+  width: fit-content;
+  padding: 5px 20px;
+  font-weight: bold;
+}
+.AboutUs .DocsInfo h2 {
+  font-weight: 700;
+  font-size: 3vw;
+  color: var(--fon-color);
+  padding: 10px 0;
+  line-height: 1.3;
+}
+.AboutUs .DocsInfo > p {
+  color: #5a5a5a;
+}
+.AboutUs .DocsInfo .Docons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.AboutUs .DocsInfo .Docons .boxcon {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+.AboutUs .DocsInfo .Docons .boxcon:hover i {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes shake {
+  0% {
+    top: 50%;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 5px;
+  }
+  50% {
+    top: 50%;
+    left: -5px;
+  }
+  75% {
+    top: 50%;
+    left: 5px;
+  }
+  100% {
+    top: 50%;
+    left: 0px;
+  }
+}
+
+.AboutUs .DocsInfo .Docons .boxcon .con {
+  flex: 1;
+  border-radius: 0 35px 35px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutUs .DocsInfo .Docons .boxcon i {
+  font-size: 38px;
+  color: #09c;
+  position: relative;
+}
+
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(1) {
+  border: 1px solid #b3f0fb;
+}
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(1) .con {
+  background-color: #edfcff;
+}
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(2) {
+  border: 1px solid #a4fcc4;
+}
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(2) .con {
+  background-color: #eefff4;
+}
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(4) {
+  border: 1px solid #e2c4ff;
+}
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(4) .con {
+  background-color: #f8f0ff;
+}
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(3) {
+  border: 1px solid #ffbdbc;
+}
+.AboutUs .DocsInfo .Docons .boxcon:nth-of-type(3) .con {
+  background-color: #fff0f0;
+}
+
+.AboutUs .DocsInfo .Docons .boxcon h5 {
+  color: var(--fon-color);
+  font-weight: bold;
+  font-size: 17px;
+  flex: 4;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.AboutUs .Docs::after {
+  background-color: #f17732;
+  border-radius: 15px;
+  content: "";
+  height: 50px;
+  left: 46%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 50px;
+}
+
+.AboutUs .Docs .aboutsquare {
+  position: absolute;
+  z-index: -1;
+  left: 40px;
+  top: 70px;
+  animation: squaremove 2s ease infinite alternate;
+}
+.AboutUs .Docs .aboutwave {
+  position: absolute;
+  z-index: -1;
+  left: 90px;
+  top: 87%;
+  width: 100px;
+  animation: wavemove 1.5s ease infinite alternate;
+}
+
+@keyframes wavemove {
+  0% {
+    left: 90px;
+    top: 87%;
+  }
+  100% {
+    left: 100px;
+    top: 87%;
+  }
+}
+@keyframes squaremove {
+  0% {
+    left: 40px;
+    top: 70px;
+  }
+  100% {
+    left: 40px;
+    top: 85px;
+  }
+}
+
+.AboutUs .Docs > div {
+  flex-basis: 40%;
+  border-radius: 50%;
+}
+
+.AboutUs .Docs .doc1 {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+.AboutUs .Docs .doc1 img {
+  width: 90%;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  border-top-right-radius: 55px;
+}
+.AboutUs .Docs .doc3 img {
+  width: 70%;
+  border-top-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  border-top-right-radius: 55px;
+}
+.AboutUs .Docs .doc2 img {
+  background-color: red;
+  width: 110%;
+  border-top-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  border-bottom-left-radius: 55px;
+}
+
+.AboutUs .Docs .exp {
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  background-color: transparent;
+}
+.AboutUs .Docs .expinfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px;
+  width: fit-content;
+  justify-content: center;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border: 2px solid var(--main-color);
+}
+.AboutUs .Docs .expinfo::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  background-color: #e6e7ff;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  z-index: -1;
+}
+.AboutUs .Docs .exp h2 {
+  font-size: 8vw;
+  color: var(--main-color);
+  font-weight: 800;
+}
+.AboutUs .Docs .exp p {
+  color: var(--fon-color);
+  font-size: 1.3vw;
+  font-weight: 800;
+  padding-bottom: 15px;
+}
+.AboutUs .Docs .doc3 {
+  text-align: end;
+}
+
+.AboutUs .DocsInfo .butonRead {
+  margin-top: 30px;
+  padding: 15px 31px;
+  background-color: #565acf;
+  border: none;
+  color: var(--overlay-color);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.5s;
+}
+.AboutUs .DocsInfo .butonRead:hover {
+  background-color: #42459e;
+}
+
+.AboutUs .DocsInfo .aboutsquare {
+  position: absolute;
+  top: 25%;
+  left: 76%;
+  z-index: -1;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+  /* animation-fill-mode: forwards; */
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.AboutUs .DocsInfo .wide {
+  position: absolute;
+  top: 100%;
+  left: 85%;
+  z-index: -1;
+  animation: waidemove 1.5s ease infinite alternate;
+}
+@keyframes waidemove {
+  form {
+    top: 100%;
+    left: 85%;
+  }
+  to {
+    top: 100%;
+    left: 82%;
+  }
+}
+
+@media (max-width: 992px) {
+  .AboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .AboutUs .Docs {
+    width: 90%;
+  }
+  .aboutsquare,
+  .wide,
+  .aboutwave,
+  .AboutUs .Docs::after {
+    display: none;
+  }
+  .AboutUs .DocsInfo .Docons {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

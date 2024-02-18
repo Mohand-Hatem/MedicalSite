@@ -1,0 +1,200 @@
+footer {
+  background-image: url(../Assets/foooter.jpg);
+  padding-top: 130px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 15px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+footer::after {
+  content: "";
+  background-image: url(../Assets/footerwave.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: -1;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: baseline center;
+  gap: 50px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 25px 0px;
+}
+
+footer .container .footerbox .title p {
+  margin-bottom: 0px !important;
+  font-size: 20px;
+  color: var(--fon-color);
+  font-weight: bold;
+}
+footer .container .footerbox .title .layout {
+  margin: 10px 0 25px;
+  width: 80px;
+  height: 10px;
+  background-image: url(../Assets/h62.png);
+}
+footer .container .footerbox {
+  /* background-color: #efefef4f; */
+  display: flex;
+  flex-direction: column;
+}
+
+footer .container .footerbox .contactus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  position: relative;
+}
+footer .container .footerbox .contactus i {
+  background-color: #f17732;
+  border-radius: 30px 30px 0 30px;
+  color: #fff;
+  font-size: 24px;
+  height: 58px;
+  line-height: 58px;
+  margin-right: 15px;
+  text-align: center;
+  width: 58px;
+}
+footer .container .footerbox .contactus .contactusinfo {
+  flex-basis: 65%;
+}
+footer .container .footerbox .contactus .contactusinfo h6 {
+  color: var(--orange-color);
+  font-weight: bold;
+}
+footer .container .footerbox .contactus .contactusinfo h5 {
+  color: var(--fon-color);
+  font-weight: bold;
+}
+
+footer .container .footerbox .links p {
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer .container .footerbox .links p:hover {
+  color: var(--main-color);
+}
+
+footer .container .footerbox .userinfo {
+  padding: 10px;
+}
+footer .container .footerbox .userinfo input {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+footer .container .footerbox .userinfo button {
+  margin: 5px 0;
+  width: 100%;
+  color: #fff;
+  background-color: var(--orange-color);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+footer .container .footerbox .linksicons {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .plusing,
+footer .wavebottom,
+footer .wavetop,
+footer .bluecircle {
+  position: absolute;
+}
+footer .wavetop {
+  left: 5%;
+  top: 16%;
+  width: 100px;
+  animation: waveingtop 2s ease infinite alternate;
+}
+footer .wavebottom {
+  right: 5%;
+  bottom: 15%;
+  width: 100px;
+  animation: waveingbot 2s ease infinite alternate;
+}
+footer .plusing {
+  right: 6%;
+  bottom: 45%;
+  width: 80px;
+  z-index: -1;
+  animation: rotating 5s linear infinite;
+}
+footer .container .footerbox .contactus .bluecircle {
+  left: -40px;
+  top: 20px;
+  z-index: -1;
+  width: 85px;
+  animation: circledown 2s ease infinite alternate;
+}
+
+@keyframes circledown {
+  from {
+    left: -40px;
+    top: 20px;
+  }
+  to {
+    left: -40px;
+    top: 40px;
+  }
+}
+
+@keyframes waveingtop {
+  from {
+    left: 5%;
+  }
+  to {
+    left: 7%;
+  }
+}
+@keyframes waveingbot {
+  from {
+    right: 5%;
+  }
+  to {
+    right: 7%;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+footer .copyright {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  text-align: center;
+}
+footer .copyright p {
+  margin: 0;
+  font-size: 17px;
+}
+footer .copyright p span {
+  font-weight: bold;
+  color: var(--main-color);
+}
